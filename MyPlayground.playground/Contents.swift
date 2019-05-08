@@ -2,49 +2,49 @@
 
 import UIKit
 
-print("Hola");
-var numero = 3;
-print(numero*numero)
-let ange = 22;  //comentario
-let label="Mi numero es ";
-var completo=label + String(ange);
-print(completo)
-var nombre="Angelo"
-let saludo="Hola \(nombre) numero favorito \(ange)"
-print(saludo)
+print("Hello World!");
+var number = 3; // "var" is a variable
+print(number*number)
+let favNumber = 22;  // "let" is a constant
+let label = "My favorite number is ";
+var completeSentence = label + String(favNumber); // "ange" is an Integer but is treated here as a String
+print(completeSentence)
+var name = "Angelo"
+let greeting = "Hello \(name) , your favorite number is \(favNumber)" // by using \(favNumber) we are treating it as a String
+print(greeting)
 
-class persona {
+class person {
     var name:String = "Initial Name"
-    var edad:Int = 24
+    var age:Int = 24
     init(){
-        print("nueva persona")
+        print("new person")
         self.sayCheese()
     }
 
-        func sayCheese(){
+    func sayCheese(){
     print("Cheese")
     }
     
-    func cambiarNombre(nuevoNombre:String){
-        name=nuevoNombre
+    func changeName(newName:String){
+        name=newName
     }
-    func cambiarEdad(aSumar:Int) -> Int {
-        edad += aSumar
-        return edad
+    func changeAge(aSumar:Int) -> Int {
+        age += aSumar
+        return age
     }
-    class func imprimir30() -> Int { // una funcion general de la clase, no asociada a una instancia especial
-        return 30
+    class func imprimir1993() -> Int { // una funcion general de la clase, no asociada a una instancia especial
+        return 1993
     }
 }
 
 
-var a=persona()
-//a.sayCheese()
-var firstPerson = persona()
+var a = person()
+a.sayCheese()
+var firstPerson = person()
 firstPerson.name = "Angelo"
 print(firstPerson.name)
 
-class superHuman:persona{
+class superHuman:person{
     var nombre:String="Hola"
     override func sayCheese() {
         print("super human CHEESE")
@@ -55,27 +55,28 @@ class superHuman:persona{
 print("el nombre antiguo es ")
 print (a.name)
 print("la edad antigua es ")
-print (a.edad)
+print (a.age)
 
 print("el nuevo nombre es ")
-a.cambiarNombre(nuevoNombre: "juanito")
+a.changeName(newName: "juanito")
 print(a.name)
 print("la edad nueva es ")
-print(a.cambiarEdad(aSumar: 6))
-print(persona.imprimir30())
+print(a.changeAge(aSumar: 6))
+print(person.imprimir1993())
 
 arc4random_uniform(13) //genera un numero aleatorio entre 0 y 12
 
-var familia = ["Olaf", "Yolanda", "Angelo","Sebastian", "Nicolas"]
-familia.count
+var familia = ["Olaf", "Yolanda", "Angelo", "Sebastian", "Nicolas"]
+familia.count   // numero de elementos en la colección
 familia.insert("Sofia", at: 0)
 
-var empleados = [String]() //crea un array vacio
+var empleados = [String]() //crea un array vacio de tipo String
+empleados.insert("John", at: 0)
 
 var a1 = 10
 var b1 = 5
 
-if a1 < b1 {
+if (a1 < b1) {  // se puede escribir el argumento con o sin paréntesis
     print("a es menor que b")
 }
 else if a1 == b1 { // el doble igual == es comparacion
