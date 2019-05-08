@@ -26,63 +26,64 @@ class person {
     }
     
     func changeName(newName:String){
-        name=newName
+        name = newName
     }
-    func changeAge(aSumar:Int) -> Int {
-        age += aSumar
+    func changeAge(addNumber:Int) -> Int {
+        age += addNumber    // the same as "age = age + addNumber"
         return age
     }
-    class func imprimir1993() -> Int { // una funcion general de la clase, no asociada a una instancia especial
+    class func print1993() -> Int { // a general function of the class, not associated with a particular instance
         return 1993
     }
 }
 
 
 var a = person()
-a.sayCheese()
+a.sayCheese()   // method "sayCheese" of this object
 var firstPerson = person()
 firstPerson.name = "Angelo"
 print(firstPerson.name)
 
 class superHuman:person{
-    var nombre:String="Hola"
+    var superName:String="Bob"
     override func sayCheese() {
         print("super human CHEESE")
-        super.sayCheese() //llama al metodo sayCheese de la clase padre
+        super.sayCheese() // call the "sayCheese" method of the parent class
     }
 }
 
-print("el nombre antiguo es ")
+print("the old name is: ")
 print (a.name)
-print("la edad antigua es ")
+print("the old age is: ")
 print (a.age)
 
-print("el nuevo nombre es ")
-a.changeName(newName: "juanito")
+print("the new name is: ")
+a.changeName(newName: "Juanito")
 print(a.name)
-print("la edad nueva es ")
-print(a.changeAge(aSumar: 6))
-print(person.imprimir1993())
+print("the new age is: ")
+print(a.changeAge(addNumber: 6))
+print(person.print1993())
 
-arc4random_uniform(13) //genera un numero aleatorio entre 0 y 12
+arc4random_uniform(13) // generates a random number between 0 and 12
 
-var familia = ["Olaf", "Yolanda", "Angelo", "Sebastian", "Nicolas"]
-familia.count   // numero de elementos en la colección
-familia.insert("Sofia", at: 0)
+var family = ["Olaf", "Yolanda", "Angelo", "Sebastian", "Nicolas"]
+family.count   // numero de elementos en la colección
+family.insert("Sofia", at: 0)
+family.insert("Felix", at: 3)
 
-var empleados = [String]() //crea un array vacio de tipo String
-empleados.insert("John", at: 0)
+var employees = [String]() // creates an empty array of type String
+employees.insert("John", at: 0)
 
 var a1 = 10
 var b1 = 5
 
-if (a1 < b1) {  // se puede escribir el argumento con o sin paréntesis
-    print("a es menor que b")
+if (a1 < b1) {  // you can write the argument with or without parentheses
+    print("a is less than b")
 }
-else if a1 == b1 { // el doble igual == es comparacion
-    print("a es igual a b")
+else if a1 == b1 { // the double equal == is for comparison
+    print("a is equal to b")
 }
-else {
-    print("b es menor que a")
+else {  // if none of the conditions above is true, this is executed. there is no need to specify a condition
+    print("b is less than a")
 }
 
