@@ -2,9 +2,14 @@
 
 import UIKit
 
+/* This is a comment written
+ in multiple lines */
+
 print("Hello World!");
 var number = 3; // "var" is a variable
 print(number*number)
+var abc = 2 , xyz = "test" , lmn = 2.5  // declare multiple variables in a single line
+var (xx, yy) = (27, 89)
 let favNumber = 22;  // "let" is a constant
 let label = "My favorite number is ";
 var completeSentence = label + String(favNumber); // "ange" is an Integer but is treated here as a String
@@ -87,3 +92,18 @@ else {  // if none of the conditions above is true, this is executed. there is n
     print("b is less than a")
 }
 
+// TUPLES
+
+let completeName = ("Angelo", "Banse")  //completeName is a Tuple of type (String, String)
+let (firstName, lastName) = completeName
+print("My first name is \(firstName) and my lastname is \(lastName)")
+print("My name is \(completeName.0)")   // access individual element from Tuple. First position is 0
+
+let otherCompleteName = (firstName: "Sam", lastName: "Andrews", age: 25)
+print("My friend \(otherCompleteName.firstName) is \(otherCompleteName.age) years old")
+
+let peopleNames = ["Anna", "Alex", "Brian", "Jack"]
+let count = peopleNames.count
+for i in 0..<count {
+    print("Person \(i + 1) is called \(peopleNames[i])")
+}
