@@ -6,12 +6,14 @@ import UIKit
  in multiple lines */
 
 print("Hello World!");
+let text123 = "test"; print(text123.count)  // count number of characters in String
 var number = 3; // "var" is a variable
+let emojiSunglasses = "\u{1F60E}"; print(emojiSunglasses)
 print(number*number)
 var abc = 2 , xyz = "test" , lmn = 2.5  // declare multiple variables in a single line
 var (xx, yy) = (27, 89)
 let favNumber = 22;  // "let" is a constant
-let label = "My favorite number is ";
+let label = "My favorite number is "
 var completeSentence = label + String(favNumber); // "ange" is an Integer but is treated here as a String
 print(completeSentence)
 var name = "Angelo"
